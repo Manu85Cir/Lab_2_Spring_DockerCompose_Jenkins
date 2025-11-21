@@ -19,9 +19,9 @@ pipeline {
          stage('tag and push image to dockerhub de mezghich') {
                      steps {
                          echo "tag and push image ..."
-                         sh "docker tag triauddata2025:v2 emmanueltriaud/triauddata2025:v2"
+                         sh "docker tag triauddata2025:v1 emmanueltriaud/triauddata2025:v1"
                          sh "docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW"
-                         sh "docker push emmanueltriaud/triauddata2025:v2"
+                         sh "docker push emmanueltriaud/triauddata2025:v1"
                          sh "docker logout"
                      }
                      post {
