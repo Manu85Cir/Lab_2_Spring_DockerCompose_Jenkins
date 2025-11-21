@@ -12,8 +12,8 @@ pipeline {
         }
          stage('Lancement de la Stack Docker-Compose') {
                     steps {
-                        sh 'docker compose -f Docker-compose.yml down'
-                        sh 'docker compose -f Docker-compose.yml up -d'
+                        sh 'docker compose -f Docker-compose-triaud.yml down'
+                        sh 'docker compose -f Docker-compose-triaud.yml up -d'
                     }
          }
          stage('tag and push image to dockerhub de mezghich') {
