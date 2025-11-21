@@ -7,7 +7,7 @@ pipeline {
 
         stage('Création image Docker') {
             steps {
-                sh 'docker build -t triauddata2025:v2 .'
+                sh 'docker build -t triauddata2025:v1 .'
             }
         }
          stage('Lancement de la Stack Docker-Compose') {
